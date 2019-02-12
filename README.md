@@ -1,11 +1,11 @@
 ## Interact with S3 compatible object storage with "s3curl.pl" script
 
-###Step-1：Pull the docker image from docker hub
+### Step-1：Pull the docker image from docker hub
    docker pull yangxh/s3curl:new
 
-###Step-2: Prepare a “.s3curl”file from a sample template in working directory. You only need to change access & secret keys and endpoints. Change ".s3curl" file ownership (ex: chown root:root .s3curl && chmod 600 .s3curl) 
+### Step-2: Prepare a “.s3curl”file from a sample template in working directory. You only need to change access & secret keys and endpoints. Change ".s3curl" file ownership (ex: chown root:root .s3curl && chmod 600 .s3curl) 
 
-###Step-3: (In your working directory,) Docker run a container from the image (yangxh/s3curl:new) to execute "s3curl.pl" script, the Perl wrapper of curl command, to interact with S3 compatible object storage. 
+### Step-3: (In your working directory,) Docker run a container from the image (yangxh/s3curl:new) to execute "s3curl.pl" script, the Perl wrapper of curl command, to interact with S3 compatible object storage. 
 
 Examples: 
   * Create a bucket:
