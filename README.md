@@ -15,17 +15,21 @@
     aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY_TO_STORAGE>
  ``` 
 ### Step-3: AWS CLI commands examples
-* Create a S3 bucket named `bucket2`<br/>
-```aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2```<br/>
-`aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2`
-<br/>
-* Sync contents from bucket `MY_Bucket` to bucket `bucket2`<br/>
-`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2`<br/>
-`aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2`
-<br/>
-* List bucket `bucket2`<br/>
-`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  ls s3://bucket2`<br/>
-`aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  ls s3://bucket2`
+* Create a S3 bucket named `bucket2`
+```
+aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2
+aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2
+```
+* Sync contents from bucket `MY_Bucket` to bucket `bucket2`
+``` 
+aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2
+aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2
+```
+* List bucket `bucket2`
+```
+aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  ls s3://bucket2
+aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  ls s3://bucket2
+```
 ## (Folder: s3curl) Interact with S3 compatible object storage with "s3curl.pl" script
 
 ### Step-1：Pull the docker image from docker hub
