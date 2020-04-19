@@ -1,8 +1,0 @@
-%awsSecretAccessKeys = (
-    # ECS account
-    ecsid => {
-        id => '<your access key>',
-        key => '<your secret key>',
-    },
-);
-@endpoints = ('object.ecstestdrive.com',);
