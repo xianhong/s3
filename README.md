@@ -2,28 +2,29 @@
 ### Step-1: Install AWS CLI (Python version >= 2.7)
  `pip install –upgrade –user awscli`
 ### Step-2: Create `config` & `credentials` files in `$HOME/.aws` folder
-   `mkdir $HOME/.aws`
-   `config` file example:
-  '''[ecs]
+   `mkdir $HOME/.aws`<br/>
+   `config` file example:<br/>
+  ```
+     [ecs]
      output=json
-  '''
-  `credentials` file example:
-  '''
+ ``` 
+  `credentials` file example:<br/>
+ ``` 
     [ecs]
     aws_access_key_id = <YOUR_ACCESS_KEY_TO_STORAGE>
     aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY_TO_STORAGE>
-  '''
+ ``` 
 ### Step-3: AWS CLI commands examples
-* Create a S3 bucket named `bucket2`
-`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2`
+* Create a S3 bucket named `bucket2`<br/>
+```aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2```<br/>
 `aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3api create-bucket --bucket bucket2`
 <br/>
-* Sync contents from bucket `MY_Bucket` to bucket `bucket2`
-`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2`
+* Sync contents from bucket `MY_Bucket` to bucket `bucket2`<br/>
+`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2`<br/>
 `aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  sync s3://MY_Bucket s3://bucket2`
 <br/>
-* List bucket `bucket2`
-`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  ls s3://bucket2`
+* List bucket `bucket2`<br/>
+`aws --profile ecs --endpoint-url=http://<STORAGE_IP>:<PORT> s3  ls s3://bucket2`<br/>
 `aws --profile ecs --no-verify-ssl --endpoint-url=https://<STORAGE_IP>:<PORT> s3  ls s3://bucket2`
 ## (Folder: s3curl) Interact with S3 compatible object storage with "s3curl.pl" script
 
